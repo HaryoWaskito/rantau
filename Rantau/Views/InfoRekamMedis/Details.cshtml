@@ -1,0 +1,115 @@
+﻿@model Rantau.ViewModels.InfoRekamMedisVM
+@{
+    ViewData["Title"] = "Details";
+}
+
+@*<h1>Details</h1>*@
+
+<div>
+    <br />
+    <h4>Detail Info Rekam Medis</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.infoRekamMedis.NoRekamMedis)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.infoRekamMedis.NoRekamMedis)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.infoRekamMedis.TanggalPemeriksaan)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.infoRekamMedis.TanggalPemeriksaan)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.infoRekamMedis.BeratBadan)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.infoRekamMedis.BeratBadan)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.infoRekamMedis.TinggiBadan)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.infoRekamMedis.TinggiBadan)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.infoRekamMedis.IndeksMassaTubuh)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.infoRekamMedis.IndeksMassaTubuh)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.infoRekamMedis.DenyutNadi)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.infoRekamMedis.DenyutNadi)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.infoRekamMedis.TekananDarahSistolik)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.infoRekamMedis.TekananDarahSistolik)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.infoRekamMedis.TekananDarahDiastolik)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.infoRekamMedis.TekananDarahDiastolik)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.infoRekamMedis.Saturasi)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.infoRekamMedis.Saturasi)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.infoRekamMedis.JarakUjiJalan)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.infoRekamMedis.JarakUjiJalan)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.infoRekamMedis.JarakUjiWaktu)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.infoRekamMedis.JarakUjiWaktu)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.infoRekamMedis.VO2Max)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.infoRekamMedis.VO2Max)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.infoRekamMedis.METs)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.infoRekamMedis.METs)
+        </dd>
+        @*<dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.infoRekamMedis.Pemeriksa)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.infoRekamMedis.Pemeriksa)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.infoRekamMedis.CreatedBy)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.infoRekamMedis.CreatedBy)
+            </dd>*@
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.infoRekamMedis.CreatedDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.infoRekamMedis.CreatedDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a onclick="showPopupSendMessage('@Url.Action("Create","HistoriPesan",Model.historiPesan,"https")','Kirim Pesan')" class="btn btn-success" style="color:white">Kirim Pesan</a>
+    @*<a asp-action="Edit" asp-route-id="@Model.InfoRekamMedisID">Edit</a> |*@
+    <a asp-action="Index" class="btn btn-dark">Kembali</a>
+</div>

@@ -1,0 +1,112 @@
+﻿@model Rantau.ViewModels.InfoRekamMedisVM
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<br />
+<h4>Buat Info Rekam Medis Baru</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="historiPesan.NamaPasien" />
+            <input type="hidden" asp-for="historiPesan.NamaSapaan" />
+            <input type="hidden" asp-for="historiPesan.NoTelepon" />
+            <input type="hidden" asp-for="historiPesan.JarakAnjuran   " />
+            <div class="form-group">
+                <label asp-for="infoRekamMedis.NoRekamMedis" class="control-label"></label>
+                <input asp-for="infoRekamMedis.NoRekamMedis" class="form-control" />
+                <span asp-validation-for="infoRekamMedis.NoRekamMedis" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="infoRekamMedis.TanggalPemeriksaan" class="control-label"></label>
+                <input asp-for="infoRekamMedis.TanggalPemeriksaan" class="form-control" />
+                <span asp-validation-for="infoRekamMedis.TanggalPemeriksaan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="infoRekamMedis.BeratBadan" class="control-label"></label>
+                <input asp-for="infoRekamMedis.BeratBadan" class="form-control" />
+                <span asp-validation-for="infoRekamMedis.BeratBadan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="infoRekamMedis.TinggiBadan" class="control-label"></label>
+                <input asp-for="infoRekamMedis.TinggiBadan" class="form-control" />
+                <span asp-validation-for="infoRekamMedis.TinggiBadan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="infoRekamMedis.IndeksMassaTubuh" class="control-label"></label>
+                <input asp-for="infoRekamMedis.IndeksMassaTubuh" class="form-control" />
+                <span asp-validation-for="infoRekamMedis.IndeksMassaTubuh" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="infoRekamMedis.DenyutNadi" class="control-label"></label>
+                <input asp-for="infoRekamMedis.DenyutNadi" class="form-control" />
+                <span asp-validation-for="infoRekamMedis.DenyutNadi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="infoRekamMedis.TekananDarahSistolik" class="control-label"></label>
+                <input asp-for="infoRekamMedis.TekananDarahSistolik" class="form-control" />
+                <span asp-validation-for="infoRekamMedis.TekananDarahSistolik" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="infoRekamMedis.TekananDarahDiastolik" class="control-label"></label>
+                <input asp-for="infoRekamMedis.TekananDarahDiastolik" class="form-control" />
+                <span asp-validation-for="infoRekamMedis.TekananDarahDiastolik" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="infoRekamMedis.Saturasi" class="control-label"></label>
+                <input asp-for="infoRekamMedis.Saturasi" class="form-control" />
+                <span asp-validation-for="infoRekamMedis.Saturasi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="infoRekamMedis.JarakUjiJalan" class="control-label"></label>
+                <input asp-for="infoRekamMedis.JarakUjiJalan" class="form-control" />
+                <span asp-validation-for="infoRekamMedis.JarakUjiJalan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="infoRekamMedis.JarakUjiWaktu" class="control-label"></label>
+                <input asp-for="infoRekamMedis.JarakUjiWaktu" class="form-control" />
+                <span asp-validation-for="infoRekamMedis.JarakUjiWaktu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="infoRekamMedis.VO2Max" class="control-label"></label>
+                <input asp-for="infoRekamMedis.VO2Max" class="form-control" />
+                <span asp-validation-for="infoRekamMedis.VO2Max" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="infoRekamMedis.METs" class="control-label"></label>
+                <input asp-for="infoRekamMedis.METs" class="form-control" />
+                <span asp-validation-for="infoRekamMedis.METs" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+            <label asp-for="Pemeriksa" class="control-label"></label>
+            <input asp-for="Pemeriksa" class="form-control" />
+            <span asp-validation-for="Pemeriksa" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="CreatedBy" class="control-label"></label>
+            <input asp-for="CreatedBy" class="form-control" />
+            <span asp-validation-for="CreatedBy" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="CreatedDate" class="control-label"></label>
+            <input asp-for="CreatedDate" class="form-control" />
+            <span asp-validation-for="CreatedDate" class="text-danger"></span>
+        </div>*@
+            <div class="form-group">
+                <input type="submit" value="Simpan" class="btn btn-primary" />
+                @*<a onclick="showPopupSendMessage('@Url.Action("Create","HistoriPesan",Model.historiPesan,Context.Request.Scheme)','Kirim Pesan')" class="btn btn-success">Simpan Kirim Pesan</a>*@
+                <a href="##" onClick="history.go(-1); return false;" class="btn btn-dark">Kembali</a>
+            </div>
+
+        </form>
+    </div>
+
+
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

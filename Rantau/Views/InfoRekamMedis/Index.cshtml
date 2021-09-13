@@ -1,0 +1,122 @@
+﻿@model IEnumerable<Rantau.Models.InfoRekamMedis>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@*<h1>Daftar </h1>*@
+
+<br />
+<h4>Info Rekam Medis</h4>
+<hr />
+<table class="table">
+    <thead>
+        <tr class="table-light">
+            <th>
+                @Html.DisplayNameFor(model => model.NoRekamMedis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TanggalPemeriksaan)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.BeratBadan)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TinggiBadan)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IndeksMassaTubuh)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DenyutNadi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TekananDarah)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Saturasi)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.JarakUjiJalan)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.JarakUjiWaktu)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.VO2Max)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.METs)
+                </th>
+                <th>
+                        @Html.DisplayNameFor(model => model.Pemeriksa)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CreatedBy)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CreatedDate)
+                    </th>*@
+            <th>
+                <a asp-action="Create" class="btn btn-outline-primary">Buat Baru</a>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NoRekamMedis)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TanggalPemeriksaan)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.BeratBadan)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TinggiBadan)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IndeksMassaTubuh)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DenyutNadi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TekananDarah)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Saturasi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.JarakUjiJalan)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.JarakUjiWaktu)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VO2Max)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.METs)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Pemeriksa)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreatedBy)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreatedDate)
+                    </td>*@
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.InfoRekamMedisID" class="btn btn-outline-secondary btn-sm">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.InfoRekamMedisID" class="btn btn-outline-info btn-sm">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.InfoRekamMedisID" class="btn btn-outline-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

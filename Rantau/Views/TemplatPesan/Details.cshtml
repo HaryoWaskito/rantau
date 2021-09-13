@@ -1,0 +1,41 @@
+﻿@model Rantau.Models.TemplatPesan
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div>
+    <br />
+    <h4>Detail Templat Pesan</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TemplatePesanCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TemplatePesanCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TemplatePesanDescription)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TemplatePesanDescription)
+        </dd>
+        @*<dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CreatedBy)
+        </dd>*@
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    @*<a asp-action="Edit" asp-route-id="@Model.TemplatePesanID">Edit</a>*@
+    <a asp-action="Index" class="btn btn-dark">Kembali</a>
+</div>

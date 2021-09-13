@@ -1,0 +1,105 @@
+﻿@model Rantau.Models.InfoRekamMedis
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<br />
+<h4>Edit Info Rekam Medis</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="InfoRekamMedisID" />
+            <div class="form-group">
+                <label asp-for="NoRekamMedis" class="control-label"></label>
+                <input asp-for="NoRekamMedis" class="form-control" readonly="" type="text" />
+                <span asp-validation-for="NoRekamMedis" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TanggalPemeriksaan" class="control-label"></label>
+                <input asp-for="TanggalPemeriksaan" class="form-control" />
+                <span asp-validation-for="TanggalPemeriksaan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BeratBadan" class="control-label"></label>
+                <input asp-for="BeratBadan" class="form-control" />
+                <span asp-validation-for="BeratBadan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TinggiBadan" class="control-label"></label>
+                <input asp-for="TinggiBadan" class="form-control" />
+                <span asp-validation-for="TinggiBadan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IndeksMassaTubuh" class="control-label"></label>
+                <input asp-for="IndeksMassaTubuh" class="form-control" />
+                <span asp-validation-for="IndeksMassaTubuh" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DenyutNadi" class="control-label"></label>
+                <input asp-for="DenyutNadi" class="form-control" />
+                <span asp-validation-for="DenyutNadi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TekananDarahSistolik" class="control-label"></label>
+                <input asp-for="TekananDarahSistolik" class="form-control" />
+                <span asp-validation-for="TekananDarahSistolik" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TekananDarahDiastolik" class="control-label"></label>
+                <input asp-for="TekananDarahDiastolik" class="form-control" />
+                <span asp-validation-for="TekananDarahDiastolik" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Saturasi" class="control-label"></label>
+                <input asp-for="Saturasi" class="form-control" />
+                <span asp-validation-for="Saturasi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JarakUjiJalan" class="control-label"></label>
+                <input asp-for="JarakUjiJalan" class="form-control" />
+                <span asp-validation-for="JarakUjiJalan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JarakUjiWaktu" class="control-label"></label>
+                <input asp-for="JarakUjiWaktu" class="form-control" />
+                <span asp-validation-for="JarakUjiWaktu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VO2Max" class="control-label"></label>
+                <input asp-for="VO2Max" class="form-control" />
+                <span asp-validation-for="VO2Max" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="METs" class="control-label"></label>
+                <input asp-for="METs" class="form-control" />
+                <span asp-validation-for="METs" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pemeriksa" class="control-label"></label>
+                <input asp-for="Pemeriksa" class="form-control" />
+                <span asp-validation-for="Pemeriksa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreatedBy" class="control-label"></label>
+                <input asp-for="CreatedBy" class="form-control" />
+                <span asp-validation-for="CreatedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreatedDate" class="control-label"></label>
+                <input asp-for="CreatedDate" class="form-control" />
+                <span asp-validation-for="CreatedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-dark">Kembali</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

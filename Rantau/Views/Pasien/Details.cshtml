@@ -1,0 +1,130 @@
+﻿@model Rantau.ViewModels.PasienVM
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div>
+    <br />
+    <h4>Detail Info Pasien</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pasien.NoRekamMedis)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.pasien.NoRekamMedis)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pasien.NamaDepan)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.pasien.NamaDepan)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pasien.NamaBelakang)
+        </dt>
+        <dd class="col-sm-10">
+            @if (String.IsNullOrEmpty(Model.pasien.NamaBelakang))
+                @Html.Raw("-")
+                else
+                    @Html.DisplayFor(model => model.pasien.NamaBelakang)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pasien.TanggalLahir)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.pasien.TanggalLahir)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pasien.JenisKelamin)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.pasien.JenisKelamin)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pasien.Alamat)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.pasien.Alamat)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pasien.NoTeleponUtama)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.pasien.NoTeleponUtama)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pasien.NoTeleponAlternatif)
+        </dt>
+        <dd class="col-sm-10">
+            @if (String.IsNullOrEmpty(Model.pasien.NoTeleponAlternatif))
+                @Html.Raw("-")
+                else
+                    @Html.DisplayFor(model => model.pasien.NoTeleponAlternatif)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pasien.JenisPembayaran)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.pasien.JenisPembayaran)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pasien.StatusPernikahan)
+        </dt>
+        <dd class="col-sm-10">
+            @if (Model.pasien.StatusPernikahan == 0)
+                @Html.Raw("-")
+                else
+                    @Html.DisplayFor(model => model.pasien.StatusPernikahan)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pasien.TingkatPendidikan)
+        </dt>
+        <dd class="col-sm-10">
+            @if (Model.pasien.TingkatPendidikan == 0)
+                @Html.Raw("-")
+                else
+                    @Html.DisplayFor(model => model.pasien.TingkatPendidikan)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pasien.RiwayatMerokok)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.pasien.RiwayatMerokok)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pasien.WaktuTempuhRS)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.pasien.WaktuTempuhRS)
+        </dd>
+        @*<dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.pasien.Pemeriksa)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.pasien.Pemeriksa)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.pasien.CreatedBy)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.pasien.CreatedBy)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.pasien.CreatedDate)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.pasien.CreatedDate)
+            </dd>*@
+    </dl>
+</div>
+<div class="col-sm-10">
+    <a onclick="showPopupSendMessage('@Url.Action("Create","HistoriPesan",Model.historiPesan,"https")','Kirim Pesan')" class="btn btn-success" style="color:white">Kirim Pesan</a>
+    <a asp-action="AddRekamMedis" asp-route-id="@Model.pasien.PasienID" class="btn btn-info">Tambah Rekam Medis</a>
+    <a asp-action="LihatRekamMedis" asp-route-id="@Model.pasien.PasienID" class="btn btn-warning">Lihat Rekam Medis</a>
+    <a asp-action="Index" class="btn btn-dark">Kembali</a>
+</div>
+@*<div class="col-sm-2">
+        <a asp-action="Edit" asp-route-id="@Model.pasien.PasienID" class="btn btn-secondary">Edit</a> |
+    </div>*@

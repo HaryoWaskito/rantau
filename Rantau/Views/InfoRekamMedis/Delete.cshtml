@@ -1,0 +1,117 @@
+﻿@model Rantau.Models.InfoRekamMedis
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>InfoRekamMedis</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NoRekamMedis)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NoRekamMedis)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TanggalPemeriksaan)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TanggalPemeriksaan)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BeratBadan)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BeratBadan)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TinggiBadan)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TinggiBadan)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IndeksMassaTubuh)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IndeksMassaTubuh)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DenyutNadi)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DenyutNadi)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TekananDarahSistolik)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TekananDarahSistolik)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TekananDarahDiastolik)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TekananDarahDiastolik)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Saturasi)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Saturasi)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JarakUjiJalan)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JarakUjiJalan)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.JarakUjiWaktu)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.JarakUjiWaktu)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VO2Max)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VO2Max)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.METs)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.METs)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pemeriksa)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pemeriksa)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CreatedBy)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="InfoRekamMedisID" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-dark">Kembali</a>
+    </form>
+</div>

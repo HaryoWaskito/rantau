@@ -1,0 +1,36 @@
+﻿@model Rantau.ViewModels.HistoriPesanVM
+
+@{ Layout = null; }
+
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="historiPesan.NamaSapaan" />
+            <input type="hidden" asp-for="historiPesan.NamaPasien" />
+            <input type="hidden" asp-for="historiPesan.NoTelepon" />
+            <input type="hidden" asp-for="historiPesan.JarakAnjuran" />
+            <input type="hidden" asp-for="historiPesan.SumberPesan" />            
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="templatPesanList" class="control-label"></label>
+                        <select asp-for="templatPesanList" class="form-select" asp-items="Model.templatPesanList" onchange="getSelectedTemplatPesan(this)"></select>
+                        <span asp-validation-for="templatPesanList" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label asp-for="historiPesan.IsiPesan" class="control-label"></label>
+                    <textarea id="isiPesan" asp-for="historiPesan.IsiPesan" rows="5" class="form-control"></textarea>
+                    <span asp-validation-for="historiPesan.IsiPesan" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Kirim" class="btn btn-primary btn-block" onclick="target = '_blank';" />
+            </div>
+        </form>
+    </div>
+</div>
+

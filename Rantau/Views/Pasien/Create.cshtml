@@ -1,0 +1,118 @@
+﻿@using Rantau.Enumerations
+
+@model Rantau.Models.Pasien
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<br />
+<h4>Buat Data Pasien baru</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NoRekamMedis" class="control-label"></label>
+                <input asp-for="NoRekamMedis" class="form-control" />
+                <span asp-validation-for="NoRekamMedis" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NamaDepan" class="control-label"></label>
+                <input asp-for="NamaDepan" class="form-control" />
+                <span asp-validation-for="NamaDepan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NamaBelakang" class="control-label"></label>
+                <input asp-for="NamaBelakang" class="form-control" />
+                <span asp-validation-for="NamaBelakang" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TanggalLahir" class="control-label"></label>
+                <input asp-for="TanggalLahir" class="form-control" />
+                <span asp-validation-for="TanggalLahir" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JenisKelamin" class="control-label"></label>
+                <select asp-for="JenisKelamin" class="form-select" asp-items="Html.GetEnumSelectList<JenisKelamin>()">
+                    <option selected="selected">-- Pilih salah satu --</option>
+                </select>
+                <span asp-validation-for="JenisKelamin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Alamat" class="control-label"></label>
+                <input asp-for="Alamat" class="form-control" />
+                <span asp-validation-for="Alamat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NoTeleponUtama" class="control-label"></label>
+                <input asp-for="NoTeleponUtama" class="form-control" />
+                <span asp-validation-for="NoTeleponUtama" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NoTeleponAlternatif" class="control-label"></label>
+                <input asp-for="NoTeleponAlternatif" class="form-control" />
+                <span asp-validation-for="NoTeleponAlternatif" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JenisPembayaran" class="control-label"></label>
+                <select asp-for="JenisPembayaran" class="form-select" asp-items="Html.GetEnumSelectList<JenisPembayaran>()">
+                    <option selected="selected">-- Pilih salah satu --</option>
+                </select>
+                <span asp-validation-for="JenisPembayaran" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StatusPernikahan" class="control-label"></label>
+                <select asp-for="StatusPernikahan" class="form-select" asp-items="Html.GetEnumSelectList<StatusPernikahan>()">
+                    <option selected="selected">-- Pilih salah satu --</option>
+                </select>
+                <span asp-validation-for="StatusPernikahan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TingkatPendidikan" class="control-label"></label>
+                <select asp-for="TingkatPendidikan" class="form-select" asp-items="Html.GetEnumSelectList<TingkatPendidikan>()">
+                    <option selected="selected">-- Pilih salah satu --</option>
+                </select>
+                <span asp-validation-for="TingkatPendidikan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RiwayatMerokok" class="control-label"></label>
+                <select asp-for="RiwayatMerokok" class="form-select" asp-items="Html.GetEnumSelectList<RiwayatMerokok>()">
+                    <option selected="selected">-- Pilih salah satu --</option>
+                </select>
+                <span asp-validation-for="RiwayatMerokok" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WaktuTempuhRS" class="control-label"></label>
+                <select asp-for="WaktuTempuhRS" class="form-select" asp-items="Html.GetEnumSelectList<JarakTempuhRS>()">
+                    <option selected="selected">-- Pilih salah satu --</option>
+                </select>
+                <span asp-validation-for="WaktuTempuhRS" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                    <label asp-for="Pemeriksa" class="control-label"></label>
+                    <input asp-for="Pemeriksa" class="form-control" />
+                    <span asp-validation-for="Pemeriksa" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CreatedBy" class="control-label"></label>
+                    <input asp-for="CreatedBy" class="form-control" />
+                    <span asp-validation-for="CreatedBy" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CreatedDate" class="control-label"></label>
+                    <input asp-for="CreatedDate" class="form-control" />
+                    <span asp-validation-for="CreatedDate" class="text-danger"></span>
+                </div>*@
+        <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-primary" />
+            <a asp-action="Index" class="btn btn-dark">Kembali</a>
+        </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

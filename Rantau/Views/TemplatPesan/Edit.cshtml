@@ -1,0 +1,45 @@
+﻿@model Rantau.Models.TemplatPesan
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<br />
+<h4>Edit Templat Pesan</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="TemplatePesanID" />
+            <div class="form-group">
+                <label asp-for="TemplatePesanCode" class="control-label"></label>
+                <input asp-for="TemplatePesanCode" class="form-control" />
+                <span asp-validation-for="TemplatePesanCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TemplatePesanDescription" class="control-label"></label>
+                <input asp-for="TemplatePesanDescription" class="form-control" />
+                <span asp-validation-for="TemplatePesanDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreatedBy" class="control-label"></label>
+                <input asp-for="CreatedBy" class="form-control" />
+                <span asp-validation-for="CreatedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreatedDate" class="control-label"></label>
+                <input asp-for="CreatedDate" class="form-control" />
+                <span asp-validation-for="CreatedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-dark">Kembali</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

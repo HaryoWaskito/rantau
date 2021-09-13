@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Rantau.Models.HistoriPesan>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<br />
+<h4>Histori Pesan</h4>
+<hr />
+<table class="table">
+    <thead class="container">
+        <tr class="table-light row">
+            <th class="col">
+                @Html.DisplayNameFor(model => model.SumberPesan)
+            </th>
+            <th class="col-6">
+                @Html.DisplayNameFor(model => model.IsiPesan)
+            </th>
+            @*<th class="col">
+                    @Html.DisplayNameFor(model => model.CreatedBy)
+                </th>*@
+            <th class="col">
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </th>
+            <th class="col">
+                <a asp-action="Create" class="btn btn-outline-primary disabled">Buat Baru</a>
+            </th>
+        </tr>
+    </thead>
+    <tbody class="container">
+        @foreach (var item in Model)
+        {
+            <tr class="row">
+                <td class="col">
+                    @Html.DisplayFor(modelItem => item.SumberPesan)
+                </td>
+                <td class="col-6">
+                    @Html.DisplayFor(modelItem => item.IsiPesan)
+                </td>
+                @*<td class="col">
+                        @Html.DisplayFor(modelItem => item.CreatedBy)
+                    </td>*@
+                <td class="col">
+                    @Html.DisplayFor(modelItem => item.CreatedDate)
+                </td>
+                <td class="col">
+                    <a asp-action="Edit" asp-route-id="@item.HistoriPesanID" class="btn btn-outline-secondary btn-sm disabled">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.HistoriPesanID" class="btn btn-outline-info btn-sm">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.HistoriPesanID" class="btn btn-outline-danger btn-sm disabled">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
